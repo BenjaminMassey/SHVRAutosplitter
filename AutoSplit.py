@@ -257,7 +257,7 @@ def split():
 
 def levelChange():
 	# Returns boolean on whether or not the level has changed
-	global lastLevel, levelSearch, finishedSearch, path
+	global lastLevel, levelSearch, path
 	
 	# Grab the save file if it exists, and if it doesn't go ahead and break out as to not trigger a split
 	try:
@@ -298,7 +298,7 @@ def levelChange():
 def finishedGame():
 	# Returns boolean on whether or not the game is finished
 	
-	global path
+	global lastLevel, finishedSearch, path
 	# Grab the save file if it exists, and if it doesn't go ahead and break out as to not trigger a split
 	try:
 		saveFile = open(path + "\\VRsuper.hot", "rb") # Open the save file as a byte string
