@@ -325,6 +325,7 @@ def finishedGame():
 prevFinished = finishedGame() # Need to have previous finished state to be checked so we don't keep pressing the end key
 
 def splitHandle():
+	global prevFinished
 	finished = finishedGame()
 	if(finished and not prevFinished): # Finished state changed from true to false
 		if debug >= 1:
